@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class Calculator {
+
+public static void main(String[] args) {
+
+csharp
+Copy code
+// Инициализируем новый объект Scanner для чтения пользовательского ввода.
+Scanner input = new Scanner(System.in);
+
+// Запрашиваем у пользователя первое число.
+System.out.print("Введите первое число: ");
+double num1 = input.nextDouble();
+
+// Запрашиваем у пользователя второе число.
+System.out.print("Введите второе число: ");
+double num2 = input.nextDouble();
+
+// Определяем оператор.
+System.out.print("Выберите операцию (+, -, *, /): ");
+String operator = input.next();
+
+// Выполняем операцию.
+double result = 0;
+switch (operator) {
+  case "+":
+    result = num1 + num2;
+    break;
+  case "-":
+    result = num1 - num2;
+    break;
+  case "*":
+    result = num1 * num2;
+    break;
+  case "/":
+    result = num1 / num2;
+    break;
+  default:
+    System.out.println("Неверный оператор!");
+    return;
+}
+
+// Выводим результат.
+System.out.printf("%f %s %f = %f", num1, operator, num2, result);
+}
+}
